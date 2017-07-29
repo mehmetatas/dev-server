@@ -12,8 +12,8 @@ function insert(req, res, next) {
             next();
             return;
         }
-
-        var data = getBody(req);
+		
+        var data = req.body;
         data.id = new Date().getTime() + '';
 
         var arr = getType(type);
@@ -92,7 +92,7 @@ function update(req, res, next) {
 
         for (var i = 0; i < arr.length; i++) {
             if (arr[i].id === id) {
-                arr[i] = getBody(req);
+                arr[i] = req.body;
                 arr[i].id = id;
                 found = true;
                 break;
@@ -149,15 +149,6 @@ function remove(req, res, next) {
     }
 
     next();
-}
-
-function getBody(req) {
-    try {
-        return JSON.parse(req.body);
-    } catch(ex) {
-        console.log(ex);
-        return null;
-    }
 }
 
 // server

@@ -12,10 +12,16 @@
 			"request": {
 				"url": "http://localhost:8080/users",
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\": \"mehmet\",\n\t\"surname\": \"atas\"\n}"
+					"raw": "{\r\n  \"name\": \"mehmet\",\r\n  \"surname\": \"atas\"\r\n}"
 				},
 				"description": ""
 			},
@@ -26,7 +32,13 @@
 			"request": {
 				"url": "http://localhost:8080/users/1501332277328",
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"name\": \"ali\",\n\t\"surname\": \"atas\"\n}"
@@ -38,32 +50,7 @@
 		{
 			"name": "search",
 			"request": {
-				"url": {
-					"raw": "http://localhost:8080/users?name=mehmet&surname=atas",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"users"
-					],
-					"query": [
-						{
-							"key": "name",
-							"value": "mehmet",
-							"equals": true,
-							"description": ""
-						},
-						{
-							"key": "surname",
-							"value": "atas",
-							"equals": true,
-							"description": ""
-						}
-					],
-					"variable": []
-				},
+				"url": "http://localhost:8080/users",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -74,7 +61,7 @@
 		{
 			"name": "delete",
 			"request": {
-				"url": "http://localhost:8080/users/1501332204579",
+				"url": "http://localhost:8080/users/1501334022028",
 				"method": "DELETE",
 				"header": [],
 				"body": {},

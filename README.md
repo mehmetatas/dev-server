@@ -29,6 +29,8 @@ This, inserts the request body as a new user entity to the `users` collection.
 
 The id generated for the newly inserted entity will return as `X-Id` parameter of the http response header.
 
+`Content-Type` parameter of the request header should be `application/json`.
+
 ### GET - Search
 
     GET http://localhost:8080/users?name=mehmet&surname=atas
@@ -52,6 +54,8 @@ Search works case sensitive and only supports equality.
 This, updates the user entity with the id "17625348342", using the data in the request body.
 
 Update simply overrides the existing data. For instance, while updating, if you do not re-send surname field inside body, you will see that the surname field is removed after update.
+
+`Content-Type` parameter of the request header should be `application/json`.
 
 ### DELETE - Remove
 
