@@ -1,0 +1,20 @@
+{
+  "name": "dev-rest",
+  "version": "1.0.0",
+  "description": "simple generic rest crud server for development purpose",
+  "keywords": [
+    "simple",
+    "rest",
+    "crud",
+    "server",
+    "development",
+    "restify",
+    "nodejs",
+    "node"
+  ],
+  "author": "mehmet ataş",
+  "license": "MIT",
+  "dependencies": {
+    "restify": "4.3.1"
+  }
+}
